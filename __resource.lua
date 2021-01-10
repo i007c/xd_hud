@@ -6,11 +6,10 @@ client_script "client.lua"
 
 server_script "server.lua"
 
-ui_page "ui/ui.html"
+ui_page "ui/index.html"
 
 files{
-    "ui/style.css",
-    "ui/img/*",
-    "ui/scripts/script.js",
-    "ui/scripts/jquery-3.5.1.min.js"
+    "ui/css/main.css",
+    "ui/img/**",
+    "ui/js/main.js",
 }
