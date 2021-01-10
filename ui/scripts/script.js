@@ -22,7 +22,6 @@ async function add_class() {
     if (wopen_bar) {
         return;
     }
-
     wopen_bar = true;
 
     $(".HUD").toggleClass("active");
@@ -67,32 +66,31 @@ function updateClock() {
 }
 
 
-$(document).ready(function(){
-    window.addEventListener('message', function(event) {
-        var data = event.data;
 
-        $("#health_status").css("height", (data.health / 2).toString()  + "%");
-        $("#armor_status").css("height", (data.armour / 2).toString()  + "%");
-        $("#thirst_status").css("height", data.plyr_thirst.toString() + "%");
-        $("#hunger_status").css("height", data.plyr_hunger.toString() + "%");
+window.addEventListener('message', function(event) {
+    var data = event.data;
 
-        $(".player_name").html(data.plyr_name);
-        $(".cash").html("$ " + data.plyr_cash);
-        $(".ping").html("$ " + data.plyr_ping);
+    $("#health_status").css("height", (data.health / 2).toString()  + "%");
+    $("#armor_status").css("height", (data.armour / 2).toString()  + "%");
+    $("#thirst_status").css("height", data.plyr_thirst.toString() + "%");
+    $("#hunger_status").css("height", data.plyr_hunger.toString() + "%");
 
-        set_job(data.plyr_job_kay);
-        set_gang(data.plyr_gang_kay);
+    $(".player_name").html(data.plyr_name);
+    $(".cash").html("$ " + data.plyr_cash);
+    $(".ping").html("$ " + data.plyr_ping);
 
-
-        if (data.hhud) {
-            document.getElementById("the_body").style.display = "none";
-        } else {
-            document.getElementById("the_body").style.removeProperty("display");
-        }
+    set_job(data.plyr_job_kay);
+    set_gang(data.plyr_gang_kay);
 
 
-        if (data.open_bar) {
-            add_class();
-        }
-    });
+    if (data.hhud) {
+        document.getElementById("the_body").style.display = "none";
+    } else {
+        document.getElementById("the_body").style.removeProperty("display");
+    }
+
+
+    if (data.open_bar) {
+        add_class();
+    }
 });
