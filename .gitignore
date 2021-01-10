@@ -40,4 +40,4 @@ luac.out
 *.hex
 
 # Local Imgs
-/local_img
+ui/img/
