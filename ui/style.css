@@ -286,7 +286,6 @@ body {
 
 .textdata.active .job_img {
     display: inline-block;
-    background-image: url(img/nojob.png);
     width: 35px;
     height: 35px;
     background-repeat: no-repeat;
@@ -302,7 +301,6 @@ body {
 
 .textdata.active .gang_img {
     display: inline-block;
-    background-image: url(img/gang.png);
     width: 35px;
     height: 35px;
     background-repeat: no-repeat;
