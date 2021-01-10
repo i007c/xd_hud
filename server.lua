@@ -24,7 +24,7 @@ AddEventHandler("jc_hud:serverUpdate", function()
             plyr_name = xPlayer.getName(),
             plyr_job = job,
             plyr_gang = "No Gang",
-            plyr_cash = xPlayer.getAccount("bank").money,
+            plyr_cash = xPlayer.getMoney(),
             ping = GetPlayerPing(source),
             open_bar = false
         }

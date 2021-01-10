@@ -45,7 +45,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid #ffbb00;
     background-color: gray;
 }
 
@@ -66,11 +65,11 @@
 }
 
 .humandata .armor .status {
-    background-color: palegreen;
+    background-color: snow;
 }
 
 .humandata .thirst .status {
-    background-color: red;
+    background-color: cyan;
 }
 
 .humandata .hunger .status {
@@ -145,7 +144,7 @@
 
 .textdata.active .name_img {
     display: inline-block;
-    background-image: url(img/name.png);
+    background-image: url(../img/name.png);
     width: 32px;
     height: 32px;
     background-repeat: no-repeat;
@@ -180,7 +179,7 @@
 
 .textdata.active .time_img {
     display: inline-block;
-    background-image: url(img/clock.jpg);
+    background-image: url(../img/clock.jpg);
     width: 32px;
     height: 32px;
     background-size: 120%;
@@ -217,7 +216,7 @@
 
 .textdata.active .cash_img {
     display: inline-block;
-    background-image: url(img/money.jpg);
+    background-image: url(../img/money.jpg);
     width: 32px;
     height: 32px;
     background-repeat: no-repeat;
@@ -280,7 +279,7 @@
 
 .textdata.active .ping_img {
     display: inline-block;
-    background-image: url(img/ping.jpg);
+    background-image: url(../img/ping.jpg);
     width: 32px;
     height: 32px;
     background-repeat: no-repeat;

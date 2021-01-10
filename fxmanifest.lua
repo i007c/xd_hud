@@ -1,5 +1,8 @@
--- resource_manifest_version "44febabe-d386-4d18-afbe-5e627f4af937"
+fx_version 'adamant'
+game 'gta5'
 
+
+version '1.1.0'
 
 
 client_script "client.lua"
@@ -9,7 +12,8 @@ server_script "server.lua"
 ui_page "ui/index.html"
 
 files{
+    "ui/index.html",
     "ui/css/main.css",
-    "ui/img/**",
+    "ui/img/*",
     "ui/js/main.js",
 }

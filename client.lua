@@ -43,7 +43,6 @@ Citizen.CreateThread(function()
             open_bar = open_bar,
             hhud = IsPauseMenuActive()
         })
-        print(open_bar)
         Citizen.Wait(250)
     end
 end)
@@ -62,7 +61,6 @@ end)
 
 RegisterCommand("my", function()
     open_bar = true
-    print(open_bar)
 end, false)
 
 

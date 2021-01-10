@@ -60,9 +60,7 @@ function set_gang(gangkay) {
 function updateClock() {
     var now = new Date(),
         time = (now.getHours()<10?'0':'') + now.getHours() + ':' + (now.getMinutes()<10?'0':'') + now.getMinutes();
-    // document.getElementsByClassName('time')[0].innerHTML = [time];
-    $(".time").html([time]);
-    setTimeout(updateClock, 1000);
+    document.getElementsByClassName('time')[0].innerHTML = [time];
 }
 
 
@@ -71,13 +69,14 @@ window.addEventListener('message', function(event) {
     var data = event.data;
 
     $("#health_status").css("height", (data.health / 2).toString()  + "%");
-    $("#armor_status").css("height", (data.armour / 2).toString()  + "%");
-    $("#thirst_status").css("height", data.plyr_thirst.toString() + "%");
-    $("#hunger_status").css("height", data.plyr_hunger.toString() + "%");
+    $("#armor_status").css("height", data.armour.toString()  + "%");
+    $("#thirst_status").css("height", (100-data.plyr_thirst).toString() + "%");
+    $("#hunger_status").css("height", (100-data.plyr_hunger).toString() + "%");
 
     $(".player_name").html(data.plyr_name);
     $(".cash").html("$ " + data.plyr_cash);
-    $(".ping").html("$ " + data.plyr_ping);
+    $(".ping").html(" " + data.plyr_ping);
+    $(".the_id").html(data.plyr_id);
 
     set_job(data.plyr_job_kay);
     set_gang(data.plyr_gang_kay);
@@ -88,7 +87,7 @@ window.addEventListener('message', function(event) {
     } else {
         document.getElementById("the_body").style.removeProperty("display");
     }
-
+    updateClock()
 
     if (data.open_bar) {
         add_class();
