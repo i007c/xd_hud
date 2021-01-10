@@ -7,22 +7,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 
-*{
+* {
     margin: 0;
     padding: 0;
-    /* background-color: rgb(2, 2, 2); */
 }
 
-body{
+body {
     background-color: rgb(2, 2, 2);
 }
 
-.content{
+.base-content {
+    position: relative;
+    overflow: hidden;
     width: 350px;
     float: right;
+    height: 100vh;
+}
+.content {
+    width: 350px;
+    float: right;
+    overflow: hidden;
+    position: relative;
 }
 
-.HUD{
+.humandata {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.humandata .bars {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 10px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.humandata .health {
+    background-color: #4BB462;
+    border: 3px solid purple;
+}
+
+
+.humandata svg {
+    position: absolute;
+    z-index: 2;
+}
+.humandata .status {
+    position: absolute;
+    width: 40px;
+    height: 55%;
+    z-index: 1;
+    bottom: 0;
+}
+
+
+.HUD {
     margin: 30px;
     border: 3px solid #ffbb00;
     position: relative;
@@ -45,7 +91,7 @@ body{
     height: 200px;
 }
 
-.icon{
+.icon {
     width: 65px;
     height: 66px;
     background: url(https://cdn.discordapp.com/attachments/773414992727769088/797535112191410196/moon.png);
@@ -53,24 +99,23 @@ body{
     background-size: cover;
     border-radius: 50%;
     z-index: 2;
-
 }
 
-.icon.active{
+.icon.active {
     display: none;
 }
 
 
-.textdata{
+.textdata {
     display: none;
 }
 
-.textdata.active{
+.textdata.active {
     display: inline-block;
     background-color: #ffbb00;
 }
 
-.textdata.active .player_name{
+.textdata.active .player_name {
     font-family: "Caveat Brush";
     position: absolute;
     top: 20px;
@@ -89,7 +134,7 @@ body{
     text-transform: capitalize;
 }
 
-.textdata.active .name_img{
+.textdata.active .name_img {
     display: inline-block;
     background-image: url(img/name.png);
     width: 32px;
@@ -108,7 +153,7 @@ body{
 }
 
 
-.textdata.active .time{
+.textdata.active .time {
     font-family: "Caveat Brush";
     position: absolute;
     top: 70px;
@@ -124,7 +169,7 @@ body{
     border-radius: 20px 0px 0px 20px;
 }
 
-.textdata.active .time_img{
+.textdata.active .time_img {
     display: inline-block;
     background-image: url(img/clock.jpg);
     width: 32px;
@@ -142,7 +187,7 @@ body{
     margin: 0px;
 }
 
-.textdata.active .cash{
+.textdata.active .cash {
     font-family: "Caveat Brush";
     position: absolute;
     top: 70px;
@@ -150,8 +195,7 @@ body{
     display: flex;
     width: 185px;
     height: 20px;
-    color: rgb(2, 243, 22);
-    text-shadow: 2px 2px 8px #15ff00;
+    color: #4BB462;
     z-index: 10;
     background-color: #ffbb00;
     padding: 5px 0px 5px 30px;
@@ -161,7 +205,7 @@ body{
     font-size: large;
 }
 
-.textdata.active .cash_img{
+.textdata.active .cash_img {
     display: inline-block;
     background-image: url(img/money.jpg);
     width: 32px;
@@ -179,7 +223,7 @@ body{
     margin: 0px;  
 }
 
-.textdata.active .id{
+.textdata.active .id {
     font-family: "Caveat Brush";
     position: absolute;
     top: 120px;
@@ -195,7 +239,7 @@ body{
     border-radius: 15px;
 }
 
-.textdata.active .test{
+.textdata.active .test {
     display: inline-block;
     position: absolute;
     top: -1px;
@@ -208,7 +252,7 @@ body{
     padding: 6px;
 }
 
-.textdata.active .ping{
+.textdata.active .ping {
     font-family: "Caveat Brush";
     position: absolute;
     top: 120px;
@@ -224,7 +268,7 @@ body{
     border-radius: 15px;
 }
 
-.textdata.active .ping_img{
+.textdata.active .ping_img {
     display: inline-block;
     background-image: url(img/ping.jpg);
     width: 32px;
@@ -240,7 +284,7 @@ body{
     z-index: 11;
 }
 
-.textdata.active .job_img{
+.textdata.active .job_img {
     display: inline-block;
     background-image: url(img/nojob.png);
     width: 35px;
@@ -256,7 +300,7 @@ body{
     z-index: 11;
 }
 
-.textdata.active .gang_img{
+.textdata.active .gang_img {
     display: inline-block;
     background-image: url(img/gang.png);
     width: 35px;
@@ -271,21 +315,3 @@ body{
     right: 250px;
     z-index: 11;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
