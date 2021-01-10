@@ -40,4 +40,12 @@ function setPlayerDatas() {
     set_gang("LSPD");
 }
 
+function updateClock() {
+    var now = new Date(),
+        time = (now.getHours()<10?'0':'') + now.getHours() + ':' + (now.getMinutes()<10?'0':'') + now.getMinutes();
+    // document.getElementsByClassName('time')[0].innerHTML = [time];
+    $(".time").html([time]);
+    setTimeout(updateClock, 1000);
+}
+
 setPlayerDatas();
