@@ -13,7 +13,7 @@
 }
 
 body {
-    background-color: rgb(2, 2, 2);
+    /* background-color: rgb(2, 2, 2); */
 }
 
 .base-content {
@@ -32,8 +32,8 @@ body {
 
 .humandata {
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    bottom: 50px;
+    right: 70px;
     display: flex;
     justify-content: center;
 }
@@ -50,8 +50,8 @@ body {
     align-items: center;
 }
 .humandata .health {
-    background-color: #4BB462;
-    border: 3px solid purple;
+    background-color: snow;
+    border: 2px solid #ffbb00;
 }
 
 
@@ -62,9 +62,14 @@ body {
 .humandata .status {
     position: absolute;
     width: 40px;
-    height: 55%;
+    
     z-index: 1;
     bottom: 0;
+}
+
+.humandata .health .status{
+    background-color: red;
+    height: 55%;
 }
 
 
