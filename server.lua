@@ -5,7 +5,6 @@ TriggerEvent("esx:getSharedObject", function(obj)
 end)
 
 
-
 RegisterNetEvent("jc_hud:serverUpdate")
 AddEventHandler("jc_hud:serverUpdate", function()
 
@@ -27,7 +26,6 @@ AddEventHandler("jc_hud:serverUpdate", function()
             plyr_gang = "No Gang",
             plyr_cash = xPlayer.getAccount("bank").money,
             ping = GetPlayerPing(source),
-            time = GetGameTimer(),
             open_bar = false
         }
 
@@ -39,6 +37,7 @@ AddEventHandler("jc_hud:serverUpdate", function()
             plyr_job = "No Job",
             plyr_gang = "No Gang",
             plyr_cash = "N / A",
+            ping = "N / A",
             open_bar = false
         }
         TriggerClientEvent("jc_hud:updateData", source, info)
