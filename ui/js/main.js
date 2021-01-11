@@ -34,7 +34,34 @@ async function add_class() {
 
 
 var job_kays = {
-    "LSPD": "police.png"
+    "weazel": "https://cdn.discordapp.com/attachments/745708329019375697/797902591681757234/weazel.png",
+    "psuspend": "https://cdn.discordapp.com/attachments/745708329019375697/797902614850306068/psuspend.png",
+    "realestateagent": "https://cdn.discordapp.com/attachments/745708329019375697/797902628125933578/realestateagent.png",
+    "pizza": "https://cdn.discordapp.com/attachments/745708329019375697/797902693372264468/pizza.png",
+    "police": "https://cdn.discordapp.com/attachments/745708329019375697/797902697453191248/police.png",
+    "postal": "https://cdn.discordapp.com/attachments/745708329019375697/797902698066083890/postal.png",
+    "sheriff": "https://cdn.discordapp.com/attachments/745708329019375697/797902698997481513/sheriff.png",
+    "swat": "https://cdn.discordapp.com/attachments/745708329019375697/797902701509738516/swat.png",
+    "tailor": "https://cdn.discordapp.com/attachments/745708329019375697/797902703254569000/tailor.png",
+    "taxi": "https://cdn.discordapp.com/attachments/745708329019375697/797902704903061524/taxi.png",
+    "trucker": "https://cdn.discordapp.com/attachments/745708329019375697/797902705708105758/trucker.png",
+    "ambulance": "https://cdn.discordapp.com/attachments/745708329019375697/797902707025379338/ambulance.png",
+    "fueler": "https://cdn.discordapp.com/attachments/745708329019375697/797902739258605568/fueler.png",
+    "garbage": "https://cdn.discordapp.com/attachments/745708329019375697/797902741203582976/garbage.png",
+    "lawyer": "https://cdn.discordapp.com/attachments/745708329019375697/797902743528013834/lawyer.png",
+    "lumberjack": "https://cdn.discordapp.com/attachments/745708329019375697/797902745934757908/lumberjack.png",
+    "mafia": "https://cdn.discordapp.com/attachments/745708329019375697/797902746845315122/mafia.png",
+    "mecano": "https://cdn.discordapp.com/attachments/745708329019375697/797902748115927050/mecano.png",
+    "miner": "https://cdn.discordapp.com/attachments/745708329019375697/797902749203169280/miner.png",
+    "nojob": "https://cdn.discordapp.com/attachments/745708329019375697/797902751454462012/nojob.png",
+    "banker": "https://cdn.discordapp.com/attachments/745708329019375697/797902922976722955/banker.png",
+    "FBI": "https://cdn.discordapp.com/attachments/745708329019375697/797903076488380436/FBI.png",
+    "fisherman": "https://cdn.discordapp.com/attachments/745708329019375697/797903129043664966/fisherman.png",
+    "detective": "https://cdn.discordapp.com/attachments/745708329019375697/797903403308023838/detective.png",
+    "cardealer": "https://cdn.discordapp.com/attachments/745708329019375697/797903708998074378/cardealer.png",
+    "banksecurity": "https://cdn.discordapp.com/attachments/745708329019375697/797903757635485726/banksecurity.png",
+    "unicorn": "https://cdn.discordapp.com/attachments/745708329019375697/797903834096599110/unicorn.png",
+    "bus": "https://cdn.discordapp.com/attachments/745708329019375697/797904078901739520/bus.png",
 };
 
 
@@ -45,7 +72,24 @@ function set_job(jobkay) {
 
 
 function set_ping(ping) {
-    $(".ping").html(ping);
+    if (typeof ping === "number") {
+        $(".ping").html(ping.toString());
+        if (ping < 70) {
+            $("#pingpath1").attr("fill","#5BFF62");
+            $("#pingpath2").attr("fill","#5BFF62");
+            $("#pingpath3").attr("fill","#5BFF62");
+        } else {
+            if (ping > 120) {
+                $("#pingpath1").attr("fill","#FF0000");
+                $("#pingpath2").attr("fill","#8C8C8C");
+                $("#pingpath3").attr("fill","#8C8C8C");
+            } else {
+                $("#pingpath1").attr("fill","#FFD600");
+                $("#pingpath2").attr("fill","#FFD600");
+                $("#pingpath3").attr("fill","#8C8C8C");
+            }
+        }
+    }
 }
 
 
