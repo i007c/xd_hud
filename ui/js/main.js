@@ -38,22 +38,23 @@ var job_kays = {
 };
 
 
-var gang_kays = {
-    "LSPD": "police.png"
-};
-
-
-var job_imgs_directory = "img/";
-var gang_imgs_directory = "img/";
-
 function set_job(jobkay) {
     let job_img = job_kays[jobkay];
     $(".job_img").css("background-image", "url("+ job_imgs_directory + job_img +")");
 }
 
-function set_gang(gangkay) {
-    let gang_img = gang_kays[gangkay];
-    $(".gang_img").css("background-image", "url("+ gang_imgs_directory + gang_img +")");
+
+function set_ping(ping) {
+    $(".ping").html(ping);
+}
+
+
+function set_gang_display(gang) {
+    if (gang) {
+        $(".gang_img").css("display","");
+    } else {
+        $(".gang_img").css("display", "none");
+    }
 }
 
 
@@ -75,11 +76,11 @@ window.addEventListener('message', function(event) {
 
     $(".player_name").html(data.plyr_name);
     $(".cash").html("$ " + data.plyr_cash);
-    $(".ping").html(" " + data.plyr_ping);
+    set_ping(data.plyr_ping);
     $(".the_id").html(data.plyr_id);
 
     set_job(data.plyr_job_kay);
-    set_gang(data.plyr_gang_kay);
+    set_gang_display(data.plyr_gang);
 
 
     if (data.hhud) {

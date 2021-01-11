@@ -1,12 +1,12 @@
-local thirst = nil
-local hunger = nil
-local player_name = nil
-local player_job_kay = nil
-local player_gang_kay = nil
-local player_money = nil
-local player_id = nil
-local player_ping = nil
-local open_bar = false
+local thirst = nil -- integer
+local hunger = nil -- integer
+local player_name = nil -- String
+local player_job_kay = nil -- String Job Key 
+local player_gang = false -- False or True
+local player_money = nil -- integer
+local player_id = nil -- String or integer
+local player_ping = nil -- integer
+local open_bar = false -- False or True
 
 AddEventHandler('esx:onPlayerSpawn', function()
     TriggerServerEvent("jc_hud:serverUpdate")
@@ -37,7 +37,7 @@ Citizen.CreateThread(function()
             plyr_hunger = hunger,
             plyr_name = player_name,
             plyr_job_kay = player_job_kay,
-            plyr_gang_kay = player_gang_kay,
+            plyr_gang = player_gang,
             plyr_cash = player_money,
             plyr_ping = player_ping,
             open_bar = open_bar,
@@ -52,7 +52,7 @@ RegisterNetEvent("jc_hud:updateData")
 AddEventHandler("jc_hud:updateData", function(data)
     player_name = data.plyr_name
     player_job_kay = data.plyr_job
-    player_gang_kay = data.plyr_gang
+    player_gang = data.plyr_gang
     player_money = data.plyr_cash
     player_id = data.plyr_id
     player_ping = data.ping
