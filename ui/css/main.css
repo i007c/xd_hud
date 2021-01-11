@@ -326,7 +326,7 @@
     border: 1px solid #ffbb00;
     border-radius: 50%;
     position: absolute;
-    top: 119px;
+    top: 119.4px;
     right: 250px;
     z-index: 11;
 }
@@ -334,8 +334,8 @@
 .textdata.active #ping_img{
     display: inline-block;
     position: absolute;
-    top: 2px;
-    left: -8.4px;
+    top: -3px;
+    left: -11px;
     margin-left: 8px;
     border-radius: 50%;
     padding: 6px;
