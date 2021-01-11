@@ -57,7 +57,7 @@
 .humandata i {
     position: absolute;
     z-index: 2;
-    font-size: 25px;
+    font-size: 17px;
 }
 
 .humandata .status {
@@ -80,7 +80,7 @@
 }
 
 .humandata .hunger .status {
-    background-color: red;
+    background-color: rgb(255, 145, 0);
 }
 
 .HUD {
@@ -149,9 +149,8 @@
     text-transform: capitalize;
 }
 
-.textdata.active .name_img {
+.textdata.active .name_div {
     display: inline-block;
-    background-image: url(../img/name.png);
     width: 32px;
     height: 32px;
     background-repeat: no-repeat;
@@ -167,6 +166,17 @@
     margin: 0px;
 }
 
+.textdata.active #name_img{
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: -6px;
+    margin-left: 8px;
+    border-radius: 50%;
+    padding: 6px;
+    justify-items: center;
+    font-size: 18px;
+}
 
 .textdata.active .time {
     font-family: "Caveat Brush";
@@ -184,11 +194,10 @@
     border-radius: 20px 0px 0px 20px;
 }
 
-.textdata.active .time_img {
+.textdata.active .time_div {
     display: inline-block;
-    background-image: url(../img/clock.jpg);
-    width: 32px;
-    height: 32px;
+    width: 31px;
+    height: 31px;
     background-size: 120%;
     background-repeat: no-repeat;
     background-position: center;
@@ -201,6 +210,18 @@
     z-index: 11;
     padding: 0px;
     margin: 0px;
+}
+
+.textdata.active #time_img{
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: -8.4px;
+    margin-left: 8px;
+    border-radius: 50%;
+    padding: 6px;
+    justify-items: center;
+    font-size: 20px;
 }
 
 .textdata.active .cash {
@@ -221,9 +242,8 @@
     font-size: large;
 }
 
-.textdata.active .cash_img {
+.textdata.active .cash_div {
     display: inline-block;
-    background-image: url(../img/money.jpg);
     width: 32px;
     height: 32px;
     background-repeat: no-repeat;
@@ -237,6 +257,17 @@
     z-index: 11;
     padding: 0px;
     margin: 0px;  
+}
+
+.textdata.active #cash_img{
+    display: inline-block;
+    position: absolute;
+    top: 2px;
+    left: -8.4px;
+    margin-left: 8px;
+    border-radius: 50%;
+    padding: 6px;
+    justify-items: center;
 }
 
 .textdata.active .id {
@@ -255,7 +286,7 @@
     border-radius: 15px;
 }
 
-.textdata.active .test {
+.textdata.active .id_div {
     display: inline-block;
     position: absolute;
     top: -1px;
@@ -265,7 +296,7 @@
     border: 1px solid #ffbb00;
     border-radius: 50%;
     background-color: snow;
-    padding: 6px;
+    padding:6px;
 }
 
 .textdata.active .ping {
@@ -284,11 +315,10 @@
     border-radius: 15px;
 }
 
-.textdata.active .ping_img {
+.textdata.active .ping_div {
     display: inline-block;
-    background-image: url(../img/ping.jpg);
-    width: 32px;
-    height: 32px;
+    width: 31px;
+    height: 31px;
     background-repeat: no-repeat;
     background-size: 120%;
     background-position: center;
@@ -299,6 +329,17 @@
     top: 119px;
     right: 250px;
     z-index: 11;
+}
+
+.textdata.active #ping_img{
+    display: inline-block;
+    position: absolute;
+    top: 2px;
+    left: -8.4px;
+    margin-left: 8px;
+    border-radius: 50%;
+    padding: 6px;
+    justify-items: center;
 }
 
 .textdata.active .job_img {
